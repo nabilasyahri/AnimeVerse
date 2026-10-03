@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'config/routes.dart';
+import 'screens/signin_screen.dart';
+import 'screens/signup_screen.dart';
+import 'screens/home_screen.dart';
+import 'screens/detail_screen.dart';
+import 'screens/favorite_screen.dart';
+import 'screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,23 +16,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-
-      theme: ThemeData(useMaterial3: true, primarySwatch: Colors.red),
-
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: const Text(
-            'Flutter 241401056',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-
-        body: const Center(child: Text('Hello pertemuan 1')),
+    return MaterialApp.router(
+      title: 'AnimeVerse',
+      theme: ThemeData(
+        fontFamily: 'Urbanist',
       ),
+      routerConfig: createRouter(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
