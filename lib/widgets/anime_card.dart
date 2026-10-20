@@ -20,8 +20,8 @@ class AnimeCard extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return GestureDetector(
-      onTap: (){
-        context.push('$AppRoutes.details}/$id');
+      onTap: () {
+        context.push('${AppRoutes.details}/$id');
       },
       child: LayoutBuilder(
         builder: (context, constraints) {
